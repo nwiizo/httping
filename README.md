@@ -1,2 +1,2 @@
 # httping
-Golangの練習でhttp ping を書きます．
+I write http ping with Golang practice.
