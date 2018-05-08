@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/csv"
 	"errors"
 	"fmt"
+	"io"
 	"net/http"
 	"net/url"
 	"os"
