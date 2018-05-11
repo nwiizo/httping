@@ -16,6 +16,13 @@ import (
 
 
 func main() {
+  flag.Usage = func() {
+    fmt.Fprintf(os.Stderr, `
+Usage of %s:
+   %s [OPTIONS] ARGS...
+Options\n`, os.Args[0],os.Args[0])
+    flag.PrintDefaults()
+  }
   var (
     d = flag.String("d", "default-value", "target_url")
     s = flag.String("s", "default-value", "dst_url")
