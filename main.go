@@ -10,11 +10,19 @@ import (
 	"os"
 	"strings"
 	"time"
+	"flag"
 )
 
+
+
 func main() {
+  var (
+    d = flag.String("d", "default-value", "target_url")
+    s = flag.String("s", "default-value", "dst_url")
+  )
+  flag.Parse()
 	//コマンドライン引数として渡します
-	fmt.Println(get_url(os.Args[1], os.Args[2]))
+	fmt.Println(get_url(*d, *s))
 }
 
 func get_url(target_url string, dst_url string) string {
